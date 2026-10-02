@@ -7,8 +7,15 @@ The adapters use public APIs and have no dependency on the GateMux server.
 
 ## Install
 
-Python 3.11+ and Pipecat >=1.12.0,<1.13 are required. The package is not yet
-published on PyPI. Install from this repository:
+Python 3.11+ and Pipecat >=1.12.0,<1.13 are required. Install the release from PyPI:
+
+```bash
+python -m pip install pipecat-gatemux==0.1.0
+# Microphone/speaker support (requires system PortAudio):
+python -m pip install "pipecat-gatemux[local]==0.1.0"
+```
+
+For examples or development, clone this repository:
 
 ```bash
 git clone https://github.com/emmelleai/pipecat-gatemux.git

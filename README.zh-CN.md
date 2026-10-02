@@ -4,7 +4,14 @@ GateMux STT、TTS、LLM 的统一 Pipecat 服务适配包。只调用公共 API�
 
 ## 安装
 
-独立仓库源码安装（尚未发布 PyPI）：
+PyPI 已发布 `0.1.0`：
+
+```bash
+python -m pip install pipecat-gatemux==0.1.0
+python -m pip install "pipecat-gatemux[local]==0.1.0"
+```
+
+运行示例或开发时，从独立仓库安装源码：
 
 ```bash
 git clone https://github.com/emmelleai/pipecat-gatemux.git
@@ -79,7 +86,7 @@ python examples/live_smoke.py --live --output /tmp/gatemux-live
 
 若本机 Python 缺少默认 CA，配置 `SSL_CERT_FILE` 指向受信任的 CA 文件，例如 macOS 的 `/etc/ssl/cert.pem`；不要关闭 TLS 校验。
 
-Pipecat 社区集成说明：https://github.com/pipecat-ai/pipecat/blob/main/COMMUNITY_INTEGRATIONS.md 。适配由 GateMux 项目维护；尚未向社区提交或发布。
+Pipecat 社区集成说明：https://github.com/pipecat-ai/pipecat/blob/main/COMMUNITY_INTEGRATIONS.md 。适配由 GateMux 项目维护；已发布 PyPI 0.1.0，尚未向 Pipecat 社区提交集成列表。
 
 ## 完整 Pipeline 验证
 
