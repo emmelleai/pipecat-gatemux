@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pipecat-gatemux"
+version = "0.1.0"
+description = "GateMux streaming STT, TTS and LLM services for Pipecat"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["pipecat-ai>=1.12.0,<1.13", "aiohttp>=3.11.12,<4"]
+
+[project.urls]
+Repository = "https://github.com/emmelleai/pipecat-gatemux"
+Issues = "https://github.com/emmelleai/pipecat-gatemux/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.24", "build>=1"]
+local = ["pipecat-ai[local]>=1.12.0,<1.13"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
