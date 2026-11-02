@@ -173,6 +173,7 @@ async def test_stt_websocket_contract_and_finish(server, processor_setup, input_
             events.append(ev)
             if ev["type"] == "session.update":
                 assert ev["session"]["sample_rate"] == 16000
+                assert "input_audio_format" not in ev["session"]
                 assert ev["session"]["turn_detection"] is None
                 await ws.send_json({"type": "session.updated"})
             elif ev["type"] == "input_audio_buffer.commit":

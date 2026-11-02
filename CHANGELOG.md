@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1 — 2026-11-03
+
+- Fix realtime STT session compatibility by omitting the optional audio format field.
+
 ## 0.1.0 — 2026-10-02
 
 - Unified configuration and public STT/TTS/LLM services.

@@ -104,7 +104,6 @@ class GateMuxSTTService(STTService):
                 {
                     "type": "session.update",
                     "session": {
-                        "input_audio_format": "pcm",
                         "sample_rate": 16000,
                         "language": getattr(
                             self._settings.language, "value", self._settings.language
